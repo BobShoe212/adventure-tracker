@@ -4,7 +4,7 @@ function InitCounter(props: { initValue: number }) {
   return (
     <React.Fragment>
       <span> Initiative:</span>
-      <span className="badge m-2 bg-primary">{props.initValue}</span>
+      <span className="combatinit">{props.initValue}</span>
     </React.Fragment>
   );
 }

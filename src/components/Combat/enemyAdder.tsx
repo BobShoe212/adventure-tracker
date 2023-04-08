@@ -13,7 +13,7 @@ function EnemyAdder(props: {
   const [newInitiative, setNewInitiative] = useState(1);
 
   return (
-    <div>
+    <div className="addenemy">
       <h1>Enemy Adder</h1>
       <input
         type="text"

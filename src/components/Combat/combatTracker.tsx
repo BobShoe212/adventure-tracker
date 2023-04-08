@@ -15,7 +15,7 @@ function CombatTracker(props: { characters: any[]; handleRemove: any }) {
   //sort the list based on initiative value, before rendering it.
   const sortedList = list.sort((a, b) => b.initValue - a.initValue);
   return (
-    <React.Fragment>
+    <div className="combattracker">
       <h1>Initiative Tracker</h1>
       {sortedList.map((x) => (
         <Character
@@ -27,7 +27,7 @@ function CombatTracker(props: { characters: any[]; handleRemove: any }) {
           ally={x.ally}
         />
       ))}
-    </React.Fragment>
+    </div>
   );
 }
 
