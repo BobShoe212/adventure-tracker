@@ -9,12 +9,11 @@ function InitChanger(props: {
   const initiativeTextBoxID = "InitiativeTextBox" + props.id;
   return (
     <React.Fragment>
-      <div className="input-group row">
-        <span className="input-group-text col-7"> Initiative:</span>
+      <div className="initchanger">
+        <span> Initiative:</span>
         <input
           id={initiativeTextBoxID}
           type="number"
-          className="input-group-text col-5"
           defaultValue={props.initValue}
           onChange={(e) => {
             props.handleInitChange(props.id, e.currentTarget.valueAsNumber);

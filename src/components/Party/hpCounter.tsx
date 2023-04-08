@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
 
-//TODO add a maxHP value to the characters
 function HpCounter(props: {
   id: string;
   hpValue: number;
@@ -12,8 +11,8 @@ function HpCounter(props: {
   const [hpChange, setHPChange] = useState(0);
 
   return (
-    <div className="row">
-      <div className="col-4 col-lg-4">
+    <div className="hpcard">
+      <div className="hpvalue">
         HP:
         <span className={getBadgeClasses(props.hpValue)}>
           {formathpValue(props.hpValue, props.maxHP)}
@@ -21,12 +20,12 @@ function HpCounter(props: {
       </div>
       <button
         onClick={() => props.handleHPChange(props.id, hpChange)}
-        className="col-1 btn btn-success btn-sm"
+        className="hpup"
       >
         +
       </button>
       <input
-        className="col-4 col-lg-5 bg-dark-subtle"
+        className="hpinput"
         type="number"
         id={heroTextBoxID}
         placeholder="Heal/Damage"
@@ -37,7 +36,7 @@ function HpCounter(props: {
         onClick={() => {
           props.handleHPChange(props.id, 0 - hpChange);
         }}
-        className="col-1 btn btn-danger btn-sm"
+        className="hpdown"
         disabled={isHPZero(props.hpValue)}
       >
         -

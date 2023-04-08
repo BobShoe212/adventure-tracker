@@ -9,7 +9,7 @@ function Character(props: {
   handleRemove: any;
 }) {
   return (
-    <div>
+    <div className="character">
       <span className={getInitBadgeClasses(props.ally)}>{props.name}</span>
       <InitCounter initValue={props.initValue} />
       {getRemoveEnemyButton(props.id, props.ally, props.handleRemove)}
@@ -20,9 +20,7 @@ function Character(props: {
 export default Character;
 
 function getInitBadgeClasses(ally: boolean) {
-  let classes = "badge m-2 bg-";
-  classes += ally ? "primary" : "danger";
-  return classes;
+  return ally ? "ally" : "enemy";
 }
 
 function getRemoveEnemyButton(id: string, ally: boolean, handleRemove: any) {
@@ -34,7 +32,7 @@ function getRemoveEnemyButton(id: string, ally: boolean, handleRemove: any) {
       onClick={() => {
         handleRemove(id);
       }}
-      className="btn btn-warning btn-sm m-2"
+      className="deleteenemy"
     >
       Remove
     </button>

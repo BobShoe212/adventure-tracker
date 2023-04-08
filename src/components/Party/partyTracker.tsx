@@ -24,7 +24,7 @@ function PartyTracker(props: {
 
   //TODO add a new prop to send to Counter called ally: true/false
   return (
-    <div className="row">
+    <div className="party">
       <h1>Party</h1>
       {heroList.map((x: Character) => (
         <Hero

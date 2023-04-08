@@ -30,7 +30,7 @@ function HeroAdder(props: {
   }
 
   return (
-    <div>
+    <div className="addhero">
       <span>Add a new Hero: </span>
       <input
         type="text"
