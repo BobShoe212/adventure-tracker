@@ -18,6 +18,10 @@ function CharacterTracker() {
   //sets the state for characterList, with an initial state loaded from local storage
   const [characterList, setCharacterList] = useState(loadFromLocalStorage());
 
+  //TODO add a function to save the party and load up a different party
+  //TODO will require a change from saving a CharacterList to saving an array of characterLists.
+  //TODO I can also save an array of party names in state so that a party can be loaded from local storage
+
   //saves the current state to local storage if it has changed
   useEffect(() => {
     localStorage.setItem("characterListKey", JSON.stringify(characterList));
@@ -123,10 +127,7 @@ export default CharacterTracker;
 function loadFromLocalStorage() {
   try {
     const serializedState = localStorage.getItem("characterListKey");
-    if (!serializedState) {
-      return [];
-    }
-    return JSON.parse(serializedState);
+    return serializedState ? JSON.parse(serializedState) : [];
   } catch {
     return [];
   }
