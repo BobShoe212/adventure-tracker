@@ -88,7 +88,7 @@ function CharacterTracker() {
   };
 
   return (
-    <>
+    <div className="App">
       <div className="header">
         <h1>Bob's Adventure Tracker</h1>
         <h2>For TTRPG Party and Combat tracking</h2>
@@ -114,7 +114,7 @@ function CharacterTracker() {
       <button className="clear" onClick={clearList}>
         Clear all Characters
       </button>
-    </>
+    </div>
   );
 }
 

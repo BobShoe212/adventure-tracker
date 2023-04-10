@@ -1,10 +1,17 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  width: 100%;
+}
+
 .header {
   display: flex;
   flex-direction: column;
   place-items: center;
   padding: 10px;
   background-color: rgb(50, 50, 97);
-  width: 100vw;
+  width: 100%;
 }
 
 .header h1 {
@@ -86,16 +93,19 @@
 .initchanger {
   max-width: 80px;
   margin-left: 10px;
+  margin-right: 20px;
   display: flex;
 }
 .initchanger input {
-  width: 20px;
+  width: 30px;
   padding: 5px;
+  margin-left: 10px;
 }
 
 .removehero {
   padding: 10px;
   margin-left: 30px;
+  background-color: red;
 }
 
 .combat {
@@ -104,4 +114,27 @@
 }
 
 .clear {
+  margin: 50px;
+  width: 250px;
+  background-color: red;
+}
+
+.addenemy {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.enemyform {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.enemytypeinput {
+  width: 120px;
+}
+
+.enemynumberinput {
+  width: 100px;
 }

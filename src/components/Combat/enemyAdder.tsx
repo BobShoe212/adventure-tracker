@@ -14,35 +14,40 @@ function EnemyAdder(props: {
 
   return (
     <div className="addenemy">
-      <h2>Enemy Adder</h2>
-      <input
-        type="text"
-        id="enemyNameTextbox"
-        placeholder="Enter Name"
-        required={true}
-        onChange={(e) => setNewName(e.currentTarget.value)}
-      ></input>
-      <input
-        type="number"
-        id="enemyNumberTextbox"
-        placeholder="Enter Quantity"
-        required={true}
-        onChange={(e) => setNewQuantity(e.currentTarget.valueAsNumber)}
-      ></input>
-      <input
-        type="number"
-        id="enemyInitTextbox"
-        placeholder="Enter Initiative"
-        required={true}
-        onChange={(e) => setNewInitiative(e.currentTarget.valueAsNumber)}
-      ></input>
-      <button
-        onClick={() =>
-          props.addCharacter(newName, newQuantity, newInitiative, false)
-        }
-      >
-        Add Enemy
-      </button>
+      <div>Add some enemies:</div>
+      <div className="enemyform">
+        <input
+          className="enemytypeinput"
+          type="text"
+          id="enemyNameTextbox"
+          placeholder="Enter Enemy type"
+          required={true}
+          onChange={(e) => setNewName(e.currentTarget.value)}
+        ></input>
+        <input
+          className="enemynumberinput"
+          type="number"
+          id="enemyNumberTextbox"
+          placeholder="Enter Quantity"
+          required={true}
+          onChange={(e) => setNewQuantity(e.currentTarget.valueAsNumber)}
+        ></input>
+        <input
+          className="enemynumberinput"
+          type="number"
+          id="enemyInitTextbox"
+          placeholder="Enter Initiative"
+          required={true}
+          onChange={(e) => setNewInitiative(e.currentTarget.valueAsNumber)}
+        ></input>
+        <button
+          onClick={() =>
+            props.addCharacter(newName, newQuantity, newInitiative, false)
+          }
+        >
+          Add Enemy
+        </button>
+      </div>
     </div>
   );
 }

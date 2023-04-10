@@ -7,7 +7,7 @@ function CombatTracker(props: { characters: any[]; handleRemove: any }) {
     return (
       <React.Fragment>
         <h2>Combat Tracker</h2>
-        <h5>There are no Characters, add some Heroes above or Enemies below</h5>
+        <h5>There are no Characters, add some Heroes or Enemies</h5>
       </React.Fragment>
     );
   }
