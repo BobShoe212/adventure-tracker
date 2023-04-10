@@ -6,8 +6,8 @@ function CombatTracker(props: { characters: any[]; handleRemove: any }) {
   if (list.length === 0) {
     return (
       <React.Fragment>
-        <h1>Combat Tracker</h1>
-        <h2>There are no Characters, add some Heroes above or Enemies below</h2>
+        <h2>Combat Tracker</h2>
+        <h5>There are no Characters, add some Heroes above or Enemies below</h5>
       </React.Fragment>
     );
   }
@@ -16,7 +16,7 @@ function CombatTracker(props: { characters: any[]; handleRemove: any }) {
   const sortedList = list.sort((a, b) => b.initValue - a.initValue);
   return (
     <div className="combattracker">
-      <h1>Initiative Tracker</h1>
+      <h2>Combat Tracker</h2>
       {sortedList.map((x) => (
         <Character
           key={x.id}

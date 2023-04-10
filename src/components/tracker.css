@@ -1,0 +1,107 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  padding: 10px;
+  background-color: rgb(50, 50, 97);
+  width: 100vw;
+}
+
+.header h1 {
+  font-size: 35px;
+  margin: 5px;
+}
+.header h2 {
+  font-size: 15px;
+  margin: 5px;
+}
+
+.tracker {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.party {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.addhero {
+  padding: 20px;
+}
+
+.addhero input {
+  width: 20vw;
+  max-width: 150px;
+  margin: 10px;
+}
+
+.herocard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+}
+.heroname {
+  min-width: 10%;
+  text-align: left;
+}
+
+.hpcard {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.hpvalue {
+  padding: 10px;
+}
+
+.hpup {
+  background-color: rgb(4, 245, 4);
+  color: black;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  margin-right: 5px;
+}
+.hpinput {
+  width: 60px;
+  height: 30px;
+  font-size: 10px;
+  margin-right: 5px;
+}
+.hpdown {
+  background-color: red;
+  color: black;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+}
+
+.initchanger {
+  max-width: 80px;
+  margin-left: 10px;
+  display: flex;
+}
+.initchanger input {
+  width: 20px;
+  padding: 5px;
+}
+
+.removehero {
+  padding: 10px;
+  margin-left: 30px;
+}
+
+.combat {
+  max-width: 500px;
+  padding: 20px;
+}
+
+.clear {
+}

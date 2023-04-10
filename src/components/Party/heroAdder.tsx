@@ -31,7 +31,7 @@ function HeroAdder(props: {
 
   return (
     <div className="addhero">
-      <span>Add a new Hero: </span>
+      <div>Add a new Hero: </div>
       <input
         type="text"
         id="nameTextbox"

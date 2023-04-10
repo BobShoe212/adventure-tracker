@@ -14,7 +14,7 @@ function EnemyAdder(props: {
 
   return (
     <div className="addenemy">
-      <h1>Enemy Adder</h1>
+      <h2>Enemy Adder</h2>
       <input
         type="text"
         id="enemyNameTextbox"

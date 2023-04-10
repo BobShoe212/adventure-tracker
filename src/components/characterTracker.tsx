@@ -4,6 +4,7 @@ import HeroAdder from "./Party/heroAdder";
 import CombatTracker from "./Combat/combatTracker";
 import EnemyAdder from "./Combat/enemyAdder";
 import addCharacter from "../actions/addCharacter";
+import "./tracker.css";
 
 export interface Character {
   id: string;
@@ -89,12 +90,8 @@ function CharacterTracker() {
   return (
     <>
       <div className="header">
-        <h1 className="title">
-          Bob's Character Tracker{" "}
-          <small className="text-muted h4">
-            For TTRPG Party and Combat tracking
-          </small>
-        </h1>
+        <h1>Bob's Adventure Tracker</h1>
+        <h2>For TTRPG Party and Combat tracking</h2>
       </div>
       <div className="tracker">
         <div className="party">
@@ -113,10 +110,10 @@ function CharacterTracker() {
           />
           <EnemyAdder addCharacter={handleAddCharacter} />
         </div>
-        <button className="clear" onClick={clearList}>
-          Clear all Characters
-        </button>
       </div>
+      <button className="clear" onClick={clearList}>
+        Clear all Characters
+      </button>
     </>
   );
 }

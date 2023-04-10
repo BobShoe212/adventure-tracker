@@ -1,6 +1,11 @@
 import React from "react";
 import HpCounter from "./hpCounter";
 import InitChanger from "./initChanger";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
+import { library } from "@fortawesome/fontawesome-svg-core";
+
+library.add(faTrashCan);
 
 function Hero(props: {
   name: string;
@@ -15,7 +20,7 @@ function Hero(props: {
 }) {
   return (
     <div className="herocard">
-      <div className="heroname">{props.name}</div>
+      <span className="heroname">{props.name}</span>
       <HpCounter
         hpValue={props.hpValue}
         maxHP={props.maxHP}
@@ -33,7 +38,7 @@ function Hero(props: {
         }}
         className="removehero"
       >
-        Remove
+        <FontAwesomeIcon icon="trash-can" />
       </button>
     </div>
   );
